@@ -11,26 +11,30 @@ import Preoperative from '../pages/Preoperative';
 import Admin from '../pages/admin/Admin';
 import NotFoundPage from '../pages/NotFoundPage';
 import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
+import roles from '../helpers/roles';
 
 
 
-export const AppRouter = () => {
+const AppRouter = () => {
       return (
             <Router>
                   <Layout>
                         <Switch>
                               <Route exact path="/" component={HomePage} />
-                              <Route exact path="/login" component={Login} />
+                              <PublicRoute exact path="/login" component={Login} />
                               <PrivateRoute exact path="/usuario" component={AccountUser} />
                               <PrivateRoute exact path="/vehiculo" component={AccountCar} />
                               <PrivateRoute exact path="/propietario" component={AccountOwner} />
                               <PrivateRoute exact path="/fuec" component={Fuec} />
                               <PrivateRoute exact path="/pagos" component={Payroll} />
                               <Route exact path="/preoperativo" component={Preoperative} />
-                              <PrivateRoute exact path="/admin/users" component={Admin} />
+                              <PrivateRoute hasRole={roles.admin} exact path="/admin/users" component={Admin} />
                               <Route path="*" component={NotFoundPage} />
                         </Switch>
                   </Layout>
             </Router>
       )
 }
+
+export default AppRouter

@@ -1,12 +1,14 @@
 import { Redirect, Route } from 'react-router-dom'
+import useAuth from '../auth/useAuth'
 
 
-const PrivateRoute = (props) => {
-      const user = {id:1,rol:'regular'}
+const PrivateRoute = ({hasRole: role, ...rest}) => {
+      const {user} = useAuth()
 
+      if(role && user?.role  !== role )return <Redirect to="/"/>
       if(!user)return <Redirect to="/login"/>
       return (
-          <Route {...props}/>         
+          <Route {...rest}/>         
       )
 }
 

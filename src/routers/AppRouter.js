@@ -2,9 +2,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Layout from '../conponents/layouts/Layout'
 import HomePage from '../pages/HomePage';
 import Login from '../pages/Login';
-import AccountUser from '../pages/AccountUser';
-import AccountCar from '../pages/AccountCar';
-import AccountOwner from '../pages/AccountOwner';
+import AccountUser from './../pages/accountPages/AccountUser';
+import AccountCar from './../pages/accountPages/AccountCar';
+import AccountOwner from './../pages/accountPages/AccountOwner';
 import Fuec from '../pages/Fuec';
 import Payroll from '../pages/Payroll';
 import Preoperative from '../pages/Preoperative';

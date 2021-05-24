@@ -13,7 +13,13 @@ import NotFoundPage from '../pages/NotFoundPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 import roles from '../helpers/roles';
-import User from '../conponents/User';
+import PerfilUser from '../conponents/PerfilUser';
+import SolicitarCuenta from '../pages/SolicitarCuenta';
+import PerfilCar from '../conponents/PerfilCar';
+import PerfilPropietario from '../conponents/PerfilPropietario';
+import CreateUser from '../pages/admin/CreateUser';
+import CreateVehiculo from '../pages/admin/CreateVehiculo';
+import CreatePropietario from '../pages/admin/CreatePropietario';
 
 
 
@@ -25,13 +31,19 @@ const AppRouter = () => {
                               <Route exact path="/" component={HomePage} />
                               <PublicRoute exact path="/login" component={Login} />
                               <PrivateRoute exact path="/usuario" component={AccountUser} />
+                              <PublicRoute exact path="/register" component={SolicitarCuenta} />
                               <PrivateRoute exact path="/vehiculo" component={AccountCar} />
                               <PrivateRoute exact path="/propietario" component={AccountOwner} />
                               <PrivateRoute exact path="/fuec" component={Fuec} />
                               <PrivateRoute exact path="/pagos" component={Payroll} />
-                              <PrivateRoute exact path="/perfilUsuario" component={User} />
-                              <Route exact path="/preoperativo" component={Preoperative} />
+                              <PrivateRoute exact path="/perfilUsuario" component={PerfilUser} />
+                              <PrivateRoute exact path="/perfilVehiculo" component={PerfilCar} />
+                              <PrivateRoute exact path="/perfilPropietario" component={PerfilPropietario} />
+                              <PrivateRoute exact path="/preoperativo" component={Preoperative} />
                               <PrivateRoute hasRole={roles.admin} exact path="/admin/users" component={Admin} />
+                              <PrivateRoute hasRole={roles.admin} exact path="/admin/createUser" component={CreateUser} />
+                              <PrivateRoute hasRole={roles.admin} exact path="/admin/createCar" component={CreateVehiculo} />
+                              <PrivateRoute hasRole={roles.admin} exact path="/admin/createOwner" component={CreatePropietario} />
                               <Route path="*" component={NotFoundPage} />
                         </Switch>
                   </Layout>

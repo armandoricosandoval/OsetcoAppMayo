@@ -15,12 +15,11 @@ const HomePage = () => {
              </div>
         </Col>
         <Col>
-              <img 
+        <img 
               className='img-fluid' 
               src="/img/task-manager.svg" 
               alt="Bienvenido a Osetco S.A" />
               <p>¡Gestiona tu tiempo,Mejora tu productividad!</p>
-
         </Col>
       </Row>
     </Container>

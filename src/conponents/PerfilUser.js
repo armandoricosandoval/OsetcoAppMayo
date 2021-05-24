@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./css/user.css";
 
-const User = () => {
+const PerfilUser = () => {
   const initialUserData = {
     firstName: "",
     lastName: "",
@@ -276,4 +276,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default PerfilUser;

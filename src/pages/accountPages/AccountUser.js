@@ -26,17 +26,14 @@ const AccountUser = () => {
                               <Card style={{maxWidth:'360px'}} className='mx-auto p-4'>
                                    <p className='text-center'><b>Nombre: </b>{user.name}</p> 
                                    <p className='text-center'><b>Correo: </b>{user.email}</p> 
-                                   <p className='text-center'><b>Tipo de Usuario: </b>{user.role}</p> 
-
+                                   <p className='text-center'><b>Tipo de Usuario: </b>{user.role}</p>
                                    <Button 
                                    as={Link} 
                                    to='/perfilUsuario'
                                    variant="success">
                                     Ver Perfil Completo
                                     </Button>
-                              </Card>
-
-                              
+                              </Card>                              
                         </Col>
                   </Row>
             </Container>

@@ -1,93 +1,49 @@
+import { Container, Row, Col,Button } from "react-bootstrap";
+
+
+
 const SolicitarCuenta = () => {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-12">
-          <div className="text center">
-            <form className="form-horizontal" method="post">              
-                <legend className="text-center header">Solicitud de Cuenta</legend>
-                <div className="form-group">
-                  <span className="col-md-1 col-md-offset-2 text-center">
-                    <i className="fa fa-user bigicon"></i>
-                  </span>
-                  <div className="col-md-8">
-                    <input
-                      id="fname"
-                      name="name"
-                      type="text"
-                      placeholder="First Name"
-                      className="form-control"
-                    />
-                  </div>
-                </div>
-                <div className="form-group">
-                  <span className="col-md-1 col-md-offset-2 text-center">
-                    <i className="fa fa-user bigicon"></i>
-                  </span>
-                  <div className="col-md-8">
-                    <input
-                      id="lname"
-                      name="name"
-                      type="text"
-                      placeholder="Last Name"
-                      className="form-control"
-                    />
-                  </div>
-                </div>
-                <div className="form-group">
-                  <span className="col-md-1 col-md-offset-2 text-center">
-                    <i className="fa fa-envelope-o bigicon"></i>
-                  </span>
-                  <div className="col-md-8">
-                    <input
-                      id="email"
-                      name="email"
-                      type="text"
-                      placeholder="Email Address"
-                      className="form-control"
-                    />
-                  </div>
-                </div>
-                <div className="form-group">
-                  <span className="col-md-1 col-md-offset-2 text-center">
-                    <i className="fa fa-phone-square bigicon"></i>
-                  </span>
-                  <div className="col-md-8">
-                    <input
-                      id="phone"
-                      name="phone"
-                      type="text"
-                      placeholder="Phone"
-                      className="form-control"
-                    />
-                  </div>
-                </div>
-                <div className="form-group">
-                  <span className="col-md-1 col-md-offset-2 text-center">
-                    <i className="fa fa-pencil-square-o bigicon"></i>
-                  </span>
-                  <div className="col-md-8">
-                    <textarea
-                      className="form-control"
-                      id="message"
-                      name="message"
-                      placeholder="Enter your massage for us here. We will get back to you within 2 business days."
-                      rows="7"
-                    ></textarea>
-                  </div>
-                </div>
-                <div className="form-group">
-                  <div className="col-md-12 text-center">
-                    <button type="submit" className="btn btn-primary btn-lg">
-                      Submit
-                    </button>
-                  </div>
-                </div>              
-            </form>
+    <Container>
+      <Row>
+        <Col>
+    <div className="card card-outline-secondary">
+      <div className="card-header">
+        <h3 className="mb-0">Solicitar Cuenta</h3>
+      </div>
+      <div className="card-body">
+        <form autocomplete="off" className="form" role="form">
+          <div className="form-group">
+            <label for="inputName">Nombres</label> 
+            <input className="form-control" id="inputName" placeholder="Full name" type="text"/>
           </div>
-        </div>
+          <div className="form-group">
+            <label for="inputEmail3">Apellidos</label> 
+            <input className="form-control" placeholder="Email" required="" type="text"/>
+          </div>
+          <div className="form-group">
+            <label for="inputPassword3">Correo</label> 
+            <input className="form-control" id="inputPassword3" placeholder="Password" required="" type="email"/> 
+            
+          </div>
+          <div className="form-group">
+            <label for="inputVerify3">Cedula de Ciudadania</label> 
+            <input className="form-control" id="inputVerify3" placeholder="Password (again)" required="" type="password"/>
+            
+          </div>
+          <div className="form-group">
+          <input type="file" name="archivosubido"></input>
+           <medium className="form-text text-muted" id="passwordHelpBlock">Para solicitar la cuenta es necesario que adjunte fotocopia de la cedula</medium>
+          </div>
+          <div className="form-group">
+            <Button className="btn btn-success btn-lg float-right" type="submit">Enviar</Button>
+          </div>
+        </form>
       </div>
     </div>
+    </Col>
+    </Row>
+    </Container>
   );
 };
 

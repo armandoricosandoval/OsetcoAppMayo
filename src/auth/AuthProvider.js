@@ -9,7 +9,11 @@ const AuthProvider = ({children}) => {
       const isLogged  = ()=> !!user;
       const hasRole= (role)=> user?.role === role
 
-      const login = (userCredentials)=> setUser({id:1,role: roles.regular, name:'alejandro',email:'alejandro@osetco.com'})
+      const login = (userCredentials)=> setUser({
+            id:1,
+            role: roles.regular, 
+            name:'alejandro',
+            email:'alejandro@osetco.com'})
       const logout = ()=>setUser(null)
       const contextValue = {
             user,

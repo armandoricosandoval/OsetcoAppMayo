@@ -20,10 +20,7 @@ const Navigation = () => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           <NavDropdown title="Admin" id="basic-nav-dropdown">
-          <NavDropdown.Item as={NavLink} to="/admin/users">Administradores</NavDropdown.Item>
-          <NavDropdown.Item as={NavLink} to="/admin/createOwner">Crear Propietario</NavDropdown.Item>
-            <NavDropdown.Item as={NavLink} to="/admin/createUser">Crear Usuario</NavDropdown.Item>
-            <NavDropdown.Item as={NavLink} to="/admin/createCar">Crear Vehiculo</NavDropdown.Item>           
+          <NavDropdown.Item as={NavLink} to="/admin/users">Administradores</NavDropdown.Item>                    
           </NavDropdown>          
         </Nav>
         <Nav>

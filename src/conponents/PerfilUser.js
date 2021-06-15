@@ -307,13 +307,14 @@ const PerfilUser = () => {
         </Col>
       </Row>
       <br />
-      <Row className="mt-2">
-      <div className="col-3">
-          <Button type="submit" className="btn btn-primary">
-            Guardar
-          </Button>
-          </div>
+      <Row className="mt-2 justify-content-end">      
+      <button 
+      type="submit" 
+      className="btn btn-primary btn-lg"
+      onClick={handleSubmit}
+      >Guardar Información</button>      
       </Row>     
+     
     </Container>
   );
 };

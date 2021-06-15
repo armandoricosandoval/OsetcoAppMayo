@@ -5,7 +5,7 @@ import { Container, Row, Col,Button } from "react-bootstrap";
 const SolicitarCuenta = () => {
   return (
     <Container>
-      <Row>
+      <Row className="mt-5">
         <Col>
     <div className="card card-outline-secondary">
       <div className="card-header">
